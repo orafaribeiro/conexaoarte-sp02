@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (min-width: 320px) {
+    section.full-banner {
+        width: 100%;
+        height: 100vh;
+        background: url("../images/background-375.jpg") no-repeat;
+        background-size: cover;
+    }
+    header.top-site {
+        position: fixed;
+        width: 100%;
+        min-height: 80px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    header.top-site #menu-hotdog {
+        margin-right: 10%;
+        width: 38px;
+        height: 38px;        
+    }
+    header.top-site #menu-site {
+        height: 100vh;
+        width: 95vw;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        display: none;
+    }
+    #menu-site ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30%;
+    }
+    #menu-site ul li {
+        text-align: center;
+        min-height: 50px;
+        font-size: 1.2em;
+        list-style: none;
+    }
+    #menu-site ul li a {
+        text-decoration: none;
+        color: #333;
+        font-family: sans-serif;
+    }
+    .show-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 411px) {
+    section.full-banner {
+        background: url("../images/background-411.jpg") no-repeat;        
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header.top-site {
+        justify-content: space-between;
+    }
+    header.top-site #logo {
+        margin-left: 10%;
+    }
+    section.full-banner {
+        background: url("../images/background-768.jpg") no-repeat;        
+    }
+    .show-desktop {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    section.full-banner {
+        background: url("../images/background.jpg") no-repeat;        
+    }
+    header.top-site {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0)
+        );
+    }    
+    header.top-site #menu-site {
+        height: 80px;
+        width: 100%;
+        background-color: unset;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+    header.top-site #menu-site ul {
+        flex-direction: row;
+        margin-top: unset;
+    }
+    header.top-site #menu-site ul li {
+        min-width: 150px;
+        text-align: center;
+        min-height: unset;
+        font-size: unset;
+    }
+    header.top-site #menu-site ul li a {
+        color: #f4f4f4;
+    }
+    .show-mobile {
+        display: none;
+    }
+}
