@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "Montserrat-regular";
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-light";
+    src: url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-medium";
+    src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-bold";
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+
 * {
     box-sizing: border-box;
 }
@@ -5,13 +22,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
-@media only screen and (min-width: 320px) {
-    section.full-banner {
-        width: 100%;
-        height: 100vh;
-        background: url("../images/background-375.jpg") no-repeat;
-        background-size: cover;
-    }
+@media only screen and (min-width: 320px) {    
     header.top-site {
         position: fixed;
         width: 100%;
@@ -19,6 +30,7 @@ html, body {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        z-index: 2;
     }
     header.top-site #menu-hotdog {
         margin-right: 10%;
@@ -32,7 +44,11 @@ html, body {
         right: 0;
         top: 0;
         background-color: #fff;
-        display: none;
+        transition-duration: 0.5s;
+        transform: translateX(800px);
+    }
+    body.open header.top-site #menu-site {
+        transform: translateX(0);
     }
     #menu-site ul {
         display: flex;
@@ -54,6 +70,87 @@ html, body {
     .show-desktop {
         display: none;
     }
+    section.full-banner {
+        width: 100%;
+        height: 100vh;
+        background: url("../images/background-375.jpg") no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .full-banner .destak {        
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100vh - 80px);
+        position: absolute;
+        bottom: 0;
+    }
+    .destak .title-destak {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+    .title-destak h2 {
+        font-family: "Montserrat-medium";
+        font-size: 1em;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .title-destak h2::before,
+    .title-destak h2::after {
+        width: 50px;
+        height: 3px;
+        background-color: #fff;
+        content: "";
+    }
+    .title-destak h1 {
+        font-family: "Montserrat-regular";
+        font-size: 2.6em;
+        text-transform: uppercase;
+    }
+    .title-destak h1,
+    .title-destak h2 {
+        margin: 0;
+    }
+    .full-banner form {
+        margin: 35px 0 190px 0;
+    }
+    .full-banner form,
+    .full-banner label,
+    .full-banner .input-container,
+    .full-banner .input-form-search {
+        width: 100%;
+    }
+    .full-banner .input-container {
+        min-height: 45px;
+    }
+    .full-banner .input-form-search {
+        border-radius: 15px;
+        border: none;
+        outline: 0;
+        margin-top: 4%;
+        padding-left: 15%;
+        min-height: 45px;
+    }
+    .full-banner .input-form-search,
+    .full-banner .input-form-search::-webkit-input-placeholder {
+        font-size: 0.8em;
+        font-family: "Montserrat-light";
+    }
+    .full-banner .input-form-search::-webkit-input-placeholder {
+        color: #aaa;
+    }
 }
 
 @media only screen and (min-width: 411px) {
@@ -74,6 +171,27 @@ html, body {
     }
     .show-desktop {
         display: block;
+    }
+    #logo-mobile.show-mobile {
+        display: none;
+    }
+    .full-banner .destak {
+        width: 90%;
+        min-height: 500px;
+    }
+    .title-destak h2 {
+        font-size: 2em;
+    }
+    .title-destak h2::before,
+    .title-destak h2::after {
+        width: 150px;
+    }
+    .full-banner .input-form-search {
+        padding-left: 10%;
+    }
+    .full-banner .input-form-search,
+    .full-banner .input-form-search::-webkit-input-placeholder {
+        font-size: 1em;
     }
 }
 
@@ -112,5 +230,22 @@ html, body {
     }
     .show-mobile {
         display: none;
+    }
+    .full-banner .destak {
+        width: 80%;
+    }
+    .destak .title-destak {
+        width: 70%;
+    }
+    .title-destak h2::before,
+    .title-destak h2::after {
+        width: 25%;
+    }
+    .title-destak h1 {
+        font-size: 5em;
+    }
+    .full-banner .input-form-search {
+        padding-left: 7%;
+        min-height: 65px;
     }
 }
