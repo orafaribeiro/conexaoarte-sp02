@@ -22,6 +22,15 @@ html, body {
     margin: 0;
     padding: 0;
 }
+ul {
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
 @media only screen and (min-width: 320px) {    
     header.top-site {
         position: fixed;
@@ -157,6 +166,67 @@ html, body {
     }
     .full-banner .input-form-search::-webkit-input-placeholder {
         color: #aaa;
+    }
+
+    /* ================================================ */
+    /* Começando o Footer */
+    footer.footer-site {
+        min-height: 600px;
+        width: 100%;
+        background-color: #282828;
+        padding: 5%;
+        margin-top: 50px;
+        font-family: "Montserrat-light";
+        border: 5px solid green;
+    }
+    .footer-site .footer-links {
+        width: 100%;
+        height: 530px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 5px solid blue;
+    }
+    .footer-links .link {
+        border: 5px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-links nav.link li {
+        text-align: center;
+    }
+    .footer-links nav.link li + li {
+        margin-top: 10px;
+    }
+    .footer-links .link a,
+    .footer-links .link-address {
+        color: #f4f4f4;
+    }
+    .footer-links .link a {
+        font-size: 1em;
+    }
+    .footer-links .link-address {
+        margin: 0;
+        line-height: 25px;
+    }
+    .footer-links .link.social-media {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+    }
+    .footer-site .copyright {
+        border: 5px solid yellow;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .copyright > p.copyright-text {
+        color: #fff;
+        margin: 0;
+        text-align: center;
+        font-size: 1em;
     }
 }
 
