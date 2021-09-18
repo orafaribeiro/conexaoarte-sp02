@@ -1,4 +1,5 @@
 const myDatabase = [{
+    category: [1],
     name: "Museu de Arte de São Paulo",
     site: "https://masp.gov.br",
     address: "Av. Paulista, 1578 - Bela Vista",
@@ -7,91 +8,188 @@ const myDatabase = [{
     cep: "01310-200",
     urlImage: "assets/images/gallery/masp.jpg",
     description: "Museu de Arte de São Paulo Assis Chateaubriand é uma das mais importantes instituições culturais brasileiras. Localiza-se, desde 7 de novembro de 1968, na Avenida Paulista, cidade de São Paulo, em um edifício projetado pela arquiteta ítalo-brasileira Lina Bo Bardi para ser sua sede.",
-    longitudeLatitude: "",
+    longitudeLatitude: "-23.5619026,-46.6561395",
     ingresso: {
         inteira: 0,
         meia: 0
     }
 }, {
+    category: [3],
     name: "Theatro Municipal",
-    site: "https://masp.gov.br",
+    site: "",
     address: "Av. Paulista, 1578 - Bela Vista",
     city: "São Paulo",
     state: "SP",
     cep: "01310-200",
     urlImage: "assets/images/gallery/theatro-municipal.jpg",
     description: "Considerado um cartão postal da cidade mais populosa do Brasil, o Teatro Municipal de São Paulo é um dos mais importantes lugares históricos da capital paulista. Com estilo arquitetônico semelhante e inspirado na Ópera de Paris, o teatro fica localizado no Centro Histórico da cidade, próximo à região da Praça da Sé.",
-    longitudeLatitude: "",
+    longitudeLatitude: "-23.5455164,-46.6389625",
     ingresso: {
         inteira: 0,
         meia: 0
     }
 }, {
+    category: [1, 3],
     name: "Museu do Videogame",
-    site: "https://masp.gov.br",
+    site: "",
     address: "Av. Paulista, 1578 - Bela Vista",
     city: "São Paulo",
     state: "SP",
     cep: "01310-200",
     urlImage: "assets/images/gallery/museu-videogame.jpg",
     description: "Com base no estado da arte da produção e recepção de games, esta pesquisa tem como objetivo propor a construção de um museu do jogo concebido no sentido de produzir uma experiência gamificada para quem o visita. Entendido como gamificação o fenômeno que vem sendo amplamente divulgado e incorporado .",
-    longitudeLatitude: "",
+    longitudeLatitude: "-23.5392553,-46.6391333",
     ingresso: {
         inteira: 0,
         meia: 0
     }
 }, {
+    category: [3],
     name: "Parque Ibirapuera",
-    site: "https://masp.gov.br",
+    site: "",
     address: "Av. Paulista, 1578 - Bela Vista",
     city: "São Paulo",
     state: "SP",
     cep: "01310-200",
     urlImage: "assets/images/gallery/parque-ibirapuera.jpg",
     description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
-    longitudeLatitude: "",
+    longitudeLatitude: "-23.588333,-46.658890",
     ingresso: {
         inteira: 0,
         meia: 0
     }
 }, {
+    category: [4],
     name: "Autódromo de Interlagos",
-    site: "https://masp.gov.br",
+    site: "",
     address: "Av. Paulista, 1578 - Bela Vista",
     city: "São Paulo",
     state: "SP",
     cep: "01310-200",
     urlImage: "assets/images/gallery/autodromo-interlagos.jpg",
     description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
-    longitudeLatitude: "",
+    longitudeLatitude: "-23.7017923,-46.6974148",
     ingresso: {
         inteira: 0,
         meia: 0
     }
 }, {
+    category: [2, 3],
     name: "Beco do Batman",
-    site: "https://masp.gov.br",
+    site: "",
     address: "Av. Paulista, 1578 - Bela Vista",
     city: "São Paulo",
     state: "SP",
     cep: "01310-200",
     urlImage: "assets/images/gallery/beco-batman.jpg",
     description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
-    longitudeLatitude: "",
+    longitudeLatitude: "-23.5567559,-46.6865132",
     ingresso: {
         inteira: 0,
         meia: 0
-    }
+    },
+    link: "https://goo.gl/maps/TEMQcPVo2xDXyJJ49"
 }, {
+    category: [2],
     name: "Pinacoteca de São Paulo",
-    site: "https://masp.gov.br",
+    site: "",
     address: "Av. Paulista, 1578 - Bela Vista",
     city: "São Paulo",
     state: "SP",
     cep: "01310-200",
     urlImage: "assets/images/gallery/pinacoteca.jpg",
     description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
-    longitudeLatitude: "",
+    longitudeLatitude: "-23.5348273,-46.6337606",
+    ingresso: {
+        inteira: 0,
+        meia: 0
+    }
+}, {
+    category: [3],
+    name: "Aquário de São Paulo",
+    site: "",
+    address: "Av. Paulista, 1578 - Bela Vista",
+    city: "São Paulo",
+    state: "SP",
+    cep: "01310-200",
+    urlImage: "assets/images/gallery/aquario.jpg",
+    description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
+    longitudeLatitude: "-23.5936461,-46.6142621",
+    ingresso: {
+        inteira: 0,
+        meia: 0
+    }
+}, {
+    category: [3],
+    name: "Avenida Paulista",
+    site: "",
+    address: "Av. Paulista, 1578 - Bela Vista",
+    city: "São Paulo",
+    state: "SP",
+    cep: "01310-200",
+    urlImage: "assets/images/gallery/avenida-paulista.jpg",
+    description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
+    longitudeLatitude: "-23.5614955,-46.6565725",
+    ingresso: {
+        inteira: 0,
+        meia: 0
+    }
+}, {
+    category: [5],
+    name: "Mercado Municipal de São Paulo",
+    site: "",
+    address: "Av. Paulista, 1578 - Bela Vista",
+    city: "São Paulo",
+    state: "SP",
+    cep: "01310-200",
+    urlImage: "assets/images/gallery/mercado-municipal.jpg",
+    description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
+    longitudeLatitude: "-23.5418938,-46.6295889",
+    ingresso: {
+        inteira: 0,
+        meia: 0
+    }
+}, {
+    category: [5],
+    name: "Restaurante Président - Chef Érick Jacquin",
+    site: "",
+    address: "Av. Paulista, 1578 - Bela Vista",
+    city: "São Paulo",
+    state: "SP",
+    cep: "01310-200",
+    urlImage: "assets/images/gallery/president-erick-jacquin.jpg",
+    description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
+    longitudeLatitude: "-23.5627846,-46.6704406",
+    ingresso: {
+        inteira: 0,
+        meia: 0
+    }
+}, {
+    category: [1, 4],
+    name: "Museu do Futebol",
+    site: "",
+    address: "Av. Paulista, 1578 - Bela Vista",
+    city: "São Paulo",
+    state: "SP",
+    cep: "01310-200",
+    urlImage: "assets/images/gallery/museu-do-futebol.jpg",
+    description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
+    longitudeLatitude: "-23.5477761,-46.6651754",
+    ingresso: {
+        inteira: 0,
+        meia: 0
+    }
+}, {
+    category: [1, 3],
+    name: "Museu do Ipiranga",
+    site: "",
+    address: "Av. Paulista, 1578 - Bela Vista",
+    city: "São Paulo",
+    state: "SP",
+    cep: "01310-200",
+    urlImage: "assets/images/gallery/museu-do-ipiranga.jpg",
+    description: "Possuí museus, planetários, auditórios, e áreas de lazer com ciclovias e quadras.",
+    longitudeLatitude: "-23.5855776,-46.6111399",
     ingresso: {
         inteira: 0,
         meia: 0
@@ -130,11 +228,29 @@ function createBlock(galleryElement, location) {
 
     });
 
+    card.querySelector("h2").addEventListener("click", () => {
+
+        window.open(`https://www.google.com/maps/search/?api=1&query=${location.longitudeLatitude}`, "_blank");
+
+    });
+
     galleryElement.appendChild(card);
+
+    setTimeout(() => card.classList.add("show"), 200);    
 
 }
 
-function createGallery(database, galleryEl) {
+function createGallery(database, galleryEl, filter = 0) {
+
+    if (Number(filter) > 0) {
+
+        database = database.filter((item) => {
+
+            return item.category.includes(Number(filter));
+
+        });
+
+    }
 
     database.forEach(location => {
 
@@ -156,7 +272,35 @@ function initSlider() {
         variableWidth: true,
         swipeToSlide: true,
         touchThreshold: 100,
-        appendArrows: ".carousel-gallery"
+        appendArrows: ".carousel-gallery",
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
 
 }
@@ -164,5 +308,41 @@ function initSlider() {
 $(document).on("ready", function() {
 
     initSlider();
+
+});
+
+function removeActive(elements) {
+    elements.forEach(el => {
+        if (el.classList.contains("active")) {
+            el.classList.remove("active");
+        }
+    });
+}
+
+const linksGallery = document.querySelectorAll(".links-slider a");
+
+linksGallery.forEach(element => {
+
+    element.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        const container = element.closest("div.carousel-container");
+
+        const currentGallery = container.querySelector(".carousel-gallery");
+
+        removeActive(linksGallery);
+
+        element.classList.add("active");
+
+        $(currentGallery).slick("unslick");
+
+        currentGallery.innerHTML = "";
+
+        createGallery(myDatabase, currentGallery, element.dataset.location);
+
+        initSlider();
+
+    });
 
 });
