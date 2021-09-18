@@ -31,6 +31,44 @@ ul li {
 a {
     text-decoration: none;
 }
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #496cacdf;
+    outline: 1px solid #496cacdf;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+@keyframes scrolldown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    30% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+@keyframes scrollup {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-5px);
+    }
+}
+#arrow1,
+#arrow2 {
+    animation: scrolldown infinite ease 1s;
+}
+#ball {
+    animation: scrollup infinite ease 1.5s;
+}
+
 @media only screen and (min-width: 320px) {    
     header.top-site {
         position: fixed;
@@ -89,12 +127,20 @@ a {
     section.full-banner {
         width: 100%;
         height: 100vh;
-        background: url("../images/background-375.jpg") no-repeat;
+        /* background: url("../images/background-375.jpg") no-repeat; */
         background-size: cover;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
+        transition: all 0.5s ease;
+    }
+    section.full-banner:before {
+        width: 100%;
+        height: 100%;
+        background-color: #00000050;
+        content: "";
+        position: absolute;
     }
     .full-banner .destak {        
         width: 80%;
@@ -150,6 +196,12 @@ a {
     }
     .full-banner .input-container {
         min-height: 45px;
+        position: relative;
+    }
+    .input-container label > svg {
+        position: absolute;
+        top: 28%;
+        left: 2%;
     }
     .full-banner .input-form-search {
         border-radius: 15px;
@@ -166,6 +218,16 @@ a {
     }
     .full-banner .input-form-search::-webkit-input-placeholder {
         color: #aaa;
+    }
+    .full-banner .mouse-icon svg {
+        position: absolute;
+        bottom: 20px;
+        height: 50px;
+        width: auto;
+    }
+    .mouse-icon #mouse,
+    .mouse-icon #ball {
+        display: none;
     }
 
     /* ================================================ */
@@ -352,9 +414,9 @@ a {
 }
 
 @media only screen and (min-width: 411px) {
-    section.full-banner {
+    /* section.full-banner {
         background: url("../images/background-411.jpg") no-repeat;        
-    }
+    } */
 }
 
 @media only screen and (min-width: 768px) {
@@ -364,9 +426,9 @@ a {
     header.top-site #logo {
         margin-left: 10%;
     }
-    section.full-banner {
-        background: url("../images/background-768.jpg") no-repeat;        
-    }
+    /* section.full-banner {
+        background: url("../images/background-768.jpg") no-repeat;
+    } */
     .show-desktop {
         display: block;
     }
@@ -383,6 +445,9 @@ a {
     .title-destak h2::before,
     .title-destak h2::after {
         width: 150px;
+    }
+    .input-container label > svg {
+        top: 42%;
     }
     .full-banner .input-form-search {
         padding-left: 10%;
@@ -422,9 +487,9 @@ a {
 }
 
 @media only screen and (min-width: 1200px) {
-    section.full-banner {
-        background: url("../images/background.jpg") no-repeat;        
-    }
+    /* section.full-banner {
+        background: url("../images/background.jpg") no-repeat;
+    } */
     header.top-site {
         background: linear-gradient(
             to bottom,
@@ -471,9 +536,16 @@ a {
     .title-destak h1 {
         font-size: 5em;
     }
+    .input-container label > svg {
+        top: 59%;
+    }
     .full-banner .input-form-search {
         padding-left: 7%;
         min-height: 65px;
+    }
+    .mouse-icon #ball,
+    .mouse-icon #mouse {
+        display: block;
     }
     footer.footer-site {
         padding: 3%;
